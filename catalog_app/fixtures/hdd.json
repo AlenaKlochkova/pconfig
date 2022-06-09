@@ -1,0 +1,42 @@
+[
+    {
+        "model": "catalog_app.hdd",
+        "pk": 1,
+        "fields": {
+            "image": "hdd/Neo Forza Zion NFS12.jpg",
+            "model": "Neo Forza Zion NFS12",
+            "description": "SATA, чтение - 475 Мбайт/сек, запись - 350 Мбайт/сек, 3D NAND 3 бит TLC",
+            "price": 1450
+        }
+    },
+    {
+        "model": "catalog_app.hdd",
+        "pk": 2,
+        "fields": {
+            "image": "hdd/QUMO Novation.jpg",
+            "model": "QUMO Novation",
+            "description": "SATA, чтение - 550 Мбайт/сек, запись - 450 Мбайт/сек, 3D NAND 3 бит TLC",
+            "price": 1450
+        }
+    },
+    {
+        "model": "catalog_app.hdd",
+        "pk": 3,
+        "fields": {
+            "image": "hdd/Tammuz GK300.jpg",
+            "model": "Tammuz GK300",
+            "description": "SATA, чтение - 500 Мбайт/сек, запись - 400 Мбайт/сек, 3D NAND 3 бит TLC",
+            "price": 1750
+        }
+    },
+    {
+        "model": "catalog_app.hdd",
+        "pk": 4,
+        "fields": {
+            "image": "hdd/Apacer AS340 PANTHER.jpg",
+            "model": "Apacer AS340 PANTHER",
+            "description": "SATA, чтение - 550 Мбайт/сек, запись - 520 Мбайт/сек, 3D NAND 3 бит TLC",
+            "price": 1799
+        }
+    }
+]

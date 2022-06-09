@@ -1,0 +1,42 @@
+[
+    {
+        "model": "catalog_app.motherboard",
+        "pk": 1,
+        "fields": {
+            "image": "motherboard/ASRock H310CM-DVS.jpg",
+            "model": "ASRock H310CM-DVS",
+            "description": "LGA 1151-v2, Intel H310, 2xDDR4-2666 МГц, 1xPCI-Ex16, Micro-ATX",
+            "price": 3199
+        }
+    },
+    {
+        "model": "catalog_app.motherboard",
+        "pk": 2,
+        "fields": {
+            "image": "motherboard/Esonic G41CRL3.jpg",
+            "model": "Esonic G41CRL3",
+            "description": "LGA 775, Intel G41, 2xDDR2-667 МГц, 1xPCI-Ex16, Micro-ATX",
+            "price": 3199
+        }
+    },
+    {
+        "model": "catalog_app.motherboard",
+        "pk": 3,
+        "fields": {
+            "image": "motherboard/GIGABYTE H310M H 2.0.jpg",
+            "model": "GIGABYTE H310M H 2.0",
+            "description": "LGA 1151-v2, Intel H310, 2xDDR4-2666 МГц, 1xPCI-Ex16, Micro-ATX",
+            "price": 3899
+        }
+    },
+    {
+        "model": "catalog_app.motherboard",
+        "pk": 4,
+        "fields": {
+            "image": "motherboard/MSI B450M-A PRO MAX.jpg",
+            "model": "MSI B450M-A PRO MAX",
+            "description": "AM4, AMD B450, 2xDDR4-2667 МГц, 1xPCI-Ex16, 1xM.2, Micro-ATX",
+            "price": 3899
+        }
+    }
+]

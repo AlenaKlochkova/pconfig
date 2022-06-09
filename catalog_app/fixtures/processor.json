@@ -1,0 +1,42 @@
+[
+    {
+        "model": "catalog_app.processor",
+        "pk": 1,
+        "fields": {
+            "image": "processor/AMD FX-4300.jpg",
+            "model": "AMD FX-4300",
+            "description": "AM3+, 4 x 3.8 ГГц, L2 - 4 МБ, L3 - 4 МБ, 2хDDR3-1866 МГц, TDP 95 Вт",
+            "price": 2599
+        }
+    },
+    {
+        "model": "catalog_app.processor",
+        "pk": 2,
+        "fields": {
+            "image": "processor/AMD FX-4300.jpg",
+            "model": "AMD FX-4300",
+            "description": "AM3+, 4 x 3.8 ГГц, L2 - 4 МБ, L3 - 4 МБ, 2хDDR3-1866 МГц, TDP 95 Вт, кулер",
+            "price": 2999
+        }
+    },
+    {
+        "model": "catalog_app.processor",
+        "pk": 3,
+        "fields": {
+            "image": "processor/AMD Athlon 200GE.jpg",
+            "model": "AMD Athlon 200GE",
+            "description": "AM4, 2 x 3.2 ГГц, L2 - 1 МБ, L3 - 4 МБ, 2хDDR4-2667 МГц, AMD Radeon Vega 3, TDP 35 Вт",
+            "price": 5999
+        }
+    },
+    {
+        "model": "catalog_app.processor",
+        "pk": 4,
+        "fields": {
+            "image": "processor/AMD PRO A10-8770.jpg",
+            "model": "AMD PRO A10-8770",
+            "description": "AM4, 4 x 3.5 ГГц, L2 - 2 МБ, 2хDDR4-2400 МГц, AMD Radeon R7, TDP 65 Вт",
+            "price": 5999
+        }
+    }
+]

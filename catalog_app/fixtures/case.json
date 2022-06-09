@@ -1,0 +1,42 @@
+[
+    {
+        "model": "catalog_app.case",
+        "pk": 1,
+        "fields": {
+            "image": "case/ExeGate AAA350.jpg",
+            "model": "ExeGate AAA350",
+            "description": "350 Вт, 20 + 4 pin, 4 pin CPU, 2 SATA",
+            "price": 899
+        }
+    },
+    {
+        "model": "catalog_app.case",
+        "pk": 2,
+        "fields": {
+            "image": "case/ExeGate AAA350.jpg",
+            "model": "ExeGate AAA350",
+            "description": "350 Вт, 20 + 4 pin, 4 pin CPU, 2 SATA",
+            "price": 899
+        }
+    },
+    {
+        "model": "catalog_app.case",
+        "pk": 3,
+        "fields": {
+            "image": "case/Super Power Winard 450WA.jpg",
+            "model": "Super Power Winard 450WA",
+            "description": "450 Вт, 20 + 4 pin, 4 pin CPU, 2 SATA",
+            "price": 1150
+        }
+    },
+    {
+        "model": "catalog_app.case",
+        "pk": 4,
+        "fields": {
+            "image": "case/ExeGate 400NPX.jpg",
+            "model": "ExeGate 400NPX",
+            "description": "400 Вт, 20 + 4 pin, 4 pin CPU, 3 SATA, 6+2 pin PCI-E",
+            "price": 1199
+        }
+    }
+]

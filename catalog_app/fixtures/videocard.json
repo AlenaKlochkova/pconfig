@@ -1,0 +1,42 @@
+[
+    {
+        "model": "catalog_app.videocard",
+        "pk": 1,
+        "fields": {
+            "image": "videocard/MSI GeForce 210.jpg",
+            "model": "MSI GeForce 210",
+            "description": "PCI-E 2.0, 1 ГБ GDDR3, 64 бит, 460 МГц, HDMI, VGA (D-Sub), DVI-I",
+            "price": 3399
+        }
+    },
+    {
+        "model": "catalog_app.videocard",
+        "pk": 2,
+        "fields": {
+            "image": "videocard/AFOX R5 230 LP.jpg",
+            "model": "AFOX R5 230 LP",
+            "description": "PCI-E, 2 ГБ GDDR3, 64 бит, 625 МГц, DVI-I, HDMI, VGA (D-Sub)",
+            "price": 4399
+        }
+    },
+    {
+        "model": "catalog_app.videocard",
+        "pk": 3,
+        "fields": {
+            "image": "videocard/GIGABYTE GeForce GT 1030 Low Profile D4 2G.jpg",
+            "model": "GIGABYTE GeForce GT 1030 Low Profile D4 2G",
+            "description": "PCI-E 3.0, 2 ГБ DDR4, 64 бит, 1151 МГц - 1417 МГц, HDMI, DVI-D",
+            "price": 6899
+        }
+    },
+    {
+        "model": "catalog_app.videocard",
+        "pk": 4,
+        "fields": {
+            "image": "videocard/KFA2 GeForce GT 1030.jpg",
+            "model": "KFA2 GeForce GT 1030",
+            "description": "PCI-E 3.0, 2 ГБ GDDR5, 64 бит, 1227 МГц - 1468 МГц, HDMI, DVI-D",
+            "price": 6999
+        }
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "model": "catalog_app.powerunit",
+        "pk": 1,
+        "fields": {
+            "image": "powerunit/GiNZZU C220.jpg",
+            "model": "GiNZZU C220",
+            "description": "Mid-Tower, Micro-ATX, Standard-ATX, USB 2.0 Type-A, USB 3.2 Gen1 Type-A",
+            "price": 1559
+        }
+    },
+    {
+        "model": "catalog_app.powerunit",
+        "pk": 2,
+        "fields": {
+            "image": "powerunit/DEXP DC-202M.jpg",
+            "model": "DEXP DC-202M",
+            "description": "Mini-Tower, Micro-ATX, Mini-ITX, USB 2.0 Type-A",
+            "price": 1999
+        }
+    },
+    {
+        "model": "catalog_app.powerunit",
+        "pk": 3,
+        "fields": {
+            "image": "powerunit/GiNZZU C190.jpg",
+            "model": "GiNZZU C190",
+            "description": "Mid-Tower, Micro-ATX, Standard-ATX, USB 2.0 Type-A",
+            "price": 2469
+        }
+    },
+    {
+        "model": "catalog_app.powerunit",
+        "pk": 4,
+        "fields": {
+            "image": "powerunit/DEXP DC-302R.jpg",
+            "model": "DEXP DC-302R",
+            "description": "Mid-Tower, Micro-ATX, Standard-ATX, USB 2.0 Type-A",
+            "price": 2499
+        }
+    }
+]

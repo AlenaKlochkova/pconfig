@@ -1,0 +1,42 @@
+[
+    {
+        "model": "catalog_app.cooler",
+        "pk": 1,
+        "fields": {
+            "image": "cooler/ID-COOLING DK-01S.jpg",
+            "model": "ID-COOLING DK-01S",
+            "description": "основание - алюминий, 2200 об/мин, 23.8 дБ, 3 pin, 65 Вт",
+            "price": 399
+        }
+    },
+    {
+        "model": "catalog_app.cooler",
+        "pk": 2,
+        "fields": {
+            "image": "cooler/Deepcool CK-11508 V2.jpg",
+            "model": "Deepcool CK-11508 V2",
+            "description": "основание - алюминий, 1800 об/мин, 24.7 дБ, 3 pin, 65 Вт",
+            "price": 480
+        }
+    },
+    {
+        "model": "catalog_app.cooler",
+        "pk": 3,
+        "fields": {
+            "image": "cooler/Cooler Master A30.jpg",
+            "model": "Cooler Master A30",
+            "description": "основание - алюминий, 2500 об/мин, 28 дБ, 3 pin, 65 Вт",
+            "price": 699
+        }
+    },
+    {
+        "model": "catalog_app.cooler",
+        "pk": 4,
+        "fields": {
+            "image": "cooler/Cooler Master I30.jpg",
+            "model": "Cooler Master I30",
+            "description": "основание - алюминий, 2600 об/мин, 28 дБ, 3 pin, 65 Вт",
+            "price": 699
+        }
+    }
+]
