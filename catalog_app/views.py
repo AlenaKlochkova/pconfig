@@ -1,9 +1,10 @@
-from django.shortcuts import render
 from django.views.generic.base import View
+from django.shortcuts import redirect
 from django.http import JsonResponse
 from abc import ABC, abstractmethod
 
 from .models import Component, Processor, Motherboard, Videocard, RAM, Powerunit, Cooler, Case, HDD
+from cart.cart import Cart
 
 
 class ComponentView(View, ABC):
@@ -15,11 +16,15 @@ class ComponentView(View, ABC):
     def get(self, request):
         model = self.model
         items = model.objects.all()
-        d = {}
+        response = {}
         for el in items:
-            d[el.pk] = {'model': el.model, 'description': el.description, 'price': el.price}
-        response = JsonResponse(d)
-        return response
+            response[el.pk] = {'model': el.model, 'description': el.description, 'price': el.price}
+        return JsonResponse(response)
+
+    def post(self, request):
+        cart = Cart(request)
+        cart.add_to_cart(request)
+        return redirect('home')
 
 
 class ProcessorView(ComponentView):
