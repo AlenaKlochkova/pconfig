@@ -1,86 +1,47 @@
-from django.views.generic.base import View
-from django.shortcuts import redirect
-from django.http import JsonResponse
-from abc import ABC, abstractmethod
+from rest_framework import generics
 
-from .models import Component, Processor, Motherboard, Videocard, RAM, Powerunit, Cooler, Case, HDD
-from cart.cart import Cart
+from .models import *
+from .serializers import ComponentSerializer
 
 
-class ComponentView(View, ABC):
-
-    @abstractmethod
-    def __init__(self):
-        self.model = Component
-
-    def get(self, request):
-        model = self.model
-        items = model.objects.all()
-        response = {}
-        for el in items:
-            response[el.pk] = {'model': el.model, 'description': el.description, 'price': el.price}
-        return JsonResponse(response)
-
-    def post(self, request):
-        cart = Cart(request)
-        cart.add_to_cart(request)
-        return redirect('home')
+class ProcessorView(generics.ListAPIView):
+    queryset = Processor.objects.all()
+    serializer_class = ComponentSerializer
 
 
-class ProcessorView(ComponentView):
-
-    def __init__(self):
-        super().__init__()
-        self.model = Processor
+class MotherboardView(generics.ListAPIView):
+    queryset = Motherboard.objects.all()
+    serializer_class = ComponentSerializer
 
 
-class MotherboardView(ComponentView):
-
-    def __init__(self):
-        super().__init__()
-        self.model = Motherboard
+class VideocardView(generics.ListAPIView):
+    queryset = Videocard.objects.all()
+    serializer_class = ComponentSerializer
 
 
-class VideocardView(ComponentView):
-
-    def __init__(self):
-        super().__init__()
-        self.model = Videocard
+class RAMView(generics.ListAPIView):
+    queryset = RAM.objects.all()
+    serializer_class = ComponentSerializer
 
 
-class RAMView(ComponentView):
-
-    def __init__(self):
-        super().__init__()
-        self.model = RAM
+class PowerunitView(generics.ListAPIView):
+    queryset = Powerunit.objects.all()
+    serializer_class = ComponentSerializer
 
 
-class PowerunitView(ComponentView):
-
-    def __init__(self):
-        super().__init__()
-        self.model = Powerunit
+class CoolerView(generics.ListAPIView):
+    queryset = Cooler.objects.all()
+    serializer_class = ComponentSerializer
 
 
-class CoolerView(ComponentView):
-
-    def __init__(self):
-        super().__init__()
-        self.model = Cooler
+class CaseView(generics.ListAPIView):
+    queryset = Case.objects.all()
+    serializer_class = ComponentSerializer
 
 
-class CaseView(ComponentView):
-
-    def __init__(self):
-        super().__init__()
-        self.model = Case
-
-
-class HDDView(ComponentView):
-
-    def __init__(self):
-        super().__init__()
-        self.model = HDD
+class HDDView(generics.ListAPIView):
+    queryset = HDD.objects.all()
+    serializer_class = ComponentSerializer
 
 
 
