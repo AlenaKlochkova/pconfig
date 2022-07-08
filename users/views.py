@@ -1,30 +1,31 @@
-from django.shortcuts import redirect, render
-from django.views.generic.base import View
-from django.contrib import messages
-from django.contrib.auth.decorators import login_required
-from django.http import JsonResponse
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from django.shortcuts import redirect
+from rest_framework import generics, status, viewsets
+from rest_framework.authtoken.models import Token
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
-from .forms import UserRegistration
+
 from .models import CustomUser
+from .serializers import UserSerializer
 #from pconfig.cart.cart import Cart
 
 
-class RegistrationView(View):
+@receiver(post_save, sender=CustomUser)
+def init_new_user(sender, instance, created, **kwargs):
+    if created:
+        Token.objects.create(user=instance)
 
-    def get(self, request):
-        response = {}
-        fields = UserRegistration.Meta.fields
-        for el in fields:
-            response[el] = None
-        return JsonResponse(response)
 
-    def post(self, request):
-        form = UserRegistration(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('home')
-        else:
-            ...
+class UserViewSet(viewsets.ModelViewSet):
+    model = CustomUser
+    serializer_class = UserSerializer
+
+    def retrieve(self, request, pk=None):
+        if pk == 'me':
+            return Response(UserSerializer(request.user).data)
+        return super(UserViewSet, self).retrieve(request, pk)
 
 
 #class OrderView(View):
