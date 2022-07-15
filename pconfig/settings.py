@@ -150,5 +150,6 @@ DJOSER = {
     'SERIALIZERS': {},
 }
 
+CART_SESSION_ID = 'cart'
 
 

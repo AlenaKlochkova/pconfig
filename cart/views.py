@@ -1,15 +1,21 @@
-from django.views.generic.base import View
-from django.http import JsonResponse
+import rest_framework.permissions
+from rest_framework.views import APIView
+from rest_framework.response import Response
+
 from .cart import Cart
 
 
-class CartView(View):
+class CartView(APIView):
+
+    permission_classes = [rest_framework.permissions.AllowAny]
 
     def get(self, request):
-
         cart = Cart(request)
-        status = cart.get_status()
-        return JsonResponse(status)
+        response = cart.cart
+        return Response(response)
+
+
+
 
 
 
