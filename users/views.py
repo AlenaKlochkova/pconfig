@@ -1,15 +1,12 @@
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.shortcuts import redirect
-from rest_framework import generics, status, viewsets
+from rest_framework import viewsets
 from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
-from rest_framework.views import APIView
 
-
-from .models import CustomUser
-from .serializers import UserSerializer
-#from pconfig.cart.cart import Cart
+from .models import CustomUser, Order
+from .serializers import UserSerializer, OrderSerializer
 
 
 @receiver(post_save, sender=CustomUser)
@@ -24,12 +21,8 @@ class UserViewSet(viewsets.ModelViewSet):
 
     def retrieve(self, request, pk=None):
         if pk == 'me':
-            return Response(UserSerializer(request.user).data)
-        return super(UserViewSet, self).retrieve(request, pk)
-
-
-#class OrderView(View):
-
-    #@login_required
-    #def make_order(self, request):
-        #...
+            if Order.objects.filter(pk='me').exists():
+                return Response(OrderSerializer(Order.objects.filter(pk='me')).data)
+            else:
+                return Response(UserSerializer(request.user).data)
+        return super().retrieve(request, pk)

@@ -66,9 +66,3 @@ class CaseView(ComponentView):
 class HDDView(ComponentView):
     def __init__(self):
         self.cat = HDD
-
-
-
-
-
-

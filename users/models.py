@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
-#from .catalog_app.models import Processor, Motherboard, Videocard, RAM, Powerunit, Cooler, Case, HDD
+from catalog_app.models import Processor, Motherboard, Case, Cooler, Videocard, HDD, RAM, Powerunit
 
 
 class CustomUser(AbstractUser):
@@ -13,26 +13,20 @@ class CustomUser(AbstractUser):
     def __str__(self):
         return self.username
 
-'''
+
 class Order(models.Model):
 
-    user = models.ForeignKey(UserRegistration)
-    processor = models.OneToOneField(Processor)
-    motherboard = models.OneToOneField(Motherboard)
-    videocard = models.OneToOneField(Videocard)
-    ram = models.OneToOneField(RAM)
-    powerunit = models.OneToOneField(Powerunit)
-    cooler = models.OneToOneField(Cooler)
-    case = models.OneToOneField(Case)
-    hdd = models.OneToOneField(HDD)
+    user = models.ForeignKey(to=CustomUser, on_delete=models.CASCADE)
+    processor = models.ForeignKey(to=Processor, on_delete=models.SET_NULL, null=True)
+    motherboard = models.ForeignKey(to=Motherboard, on_delete=models.SET_NULL, null=True)
+    videocard = models.ForeignKey(to=Videocard, on_delete=models.SET_NULL, null=True)
+    ram = models.ForeignKey(to=RAM, on_delete=models.SET_NULL, null=True)
+    powerunit = models.ForeignKey(to=Powerunit, on_delete=models.SET_NULL, null=True)
+    cooler = models.ForeignKey(to=Cooler, on_delete=models.SET_NULL, null=True)
+    case = models.ForeignKey(to=Case, on_delete=models.SET_NULL, null=True)
+    hdd = models.ForeignKey(to=HDD, on_delete=models.SET_NULL, null=True)
+    total_price = models.IntegerField(default=0)
 
     class Meta:
         verbose_name = 'Заказ'
         verbose_name_plural = 'Заказы'
-
-class Sample(Order):
-
-    class Meta:
-        verbose_name = 'Шаблон'
-        verbose_name_plural = 'Шаблоны'
-'''

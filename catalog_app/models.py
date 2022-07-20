@@ -6,13 +6,12 @@ class Component(models.Model):
     model = models.CharField("Модель", max_length=50)
     description = models.CharField("Характеристики", max_length=150)
     price = models.PositiveIntegerField("Цена")
-    image = models.ImageField()
+    image = models.ImageField(blank=True)
 
     class Meta:
         abstract = True
 
     def __str__(self):
-
         return self.model
 
 
@@ -69,4 +68,3 @@ class Case(Component):
     class Meta:
         verbose_name = 'Корпус'
         verbose_name_plural = 'Корпуса'
-
